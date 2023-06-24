@@ -151,7 +151,7 @@
         z-index: 2;
       }
       position: relative;
-      &::before{
+      &::before {
         content: "";
         width: 0;
         height: 100%;
@@ -169,7 +169,7 @@
   }
   &--radio {
     position: relative;
-    transition: .3s ease-out;
+    transition: 0.3s ease-out;
     input {
       position: absolute;
       top: 0;
@@ -201,8 +201,8 @@
       border-radius: 50%;
       transition: 0.3s ease-out;
     }
-    &:hover{
-      opacity: .7;
+    &:hover {
+      opacity: 0.7;
     }
   }
 }
@@ -651,5 +651,42 @@
   gap: 30px;
   .input {
     width: auto;
+  }
+}
+@mixin components-1700 {
+  .main {
+    &__content {
+      padding: 120px 0 110px 300px;
+    }
+  }
+}
+@mixin components-1470 {
+  .main {
+    &__content {
+      padding: 110px 0 100px 270px;
+    }
+  }
+}
+@mixin components-1280 {
+  .main {
+    &__content {
+      padding: 110px 0 100px 240px;
+    }
+  }
+  .button {
+    font-size: 16px;
+  }
+}
+@mixin components-1180 {
+  .main {
+    &__content {
+      padding: 110px 0 100px 200px;
+    }
+  }
+  .button {
+    font-size: 14px;
+  }
+  .input {
+    font-size: 16px;
   }
 }
