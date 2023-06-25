@@ -108,14 +108,20 @@
       opacity: 0;
       max-height: 0;
       pointer-events: none;
-      p {
+      a {
+        display: block;
         padding: 10px 10px;
         transition: 0.3s ease-out;
         cursor: pointer;
+        border-bottom: 1px solid $black-2;
+        color: $white;
         &:first-child {
           padding-top: 14px;
           font-size: 14px;
           color: rgba($white, 0.5);
+        }
+        &:last-child {
+          border-bottom: unset;
         }
         &:hover {
           opacity: 0.5;
@@ -167,7 +173,7 @@
       height: 0.7em;
     }
   }
-  &--radio {
+  &--checkBox {
     position: relative;
     transition: 0.3s ease-out;
     input {
@@ -203,6 +209,30 @@
     }
     &:hover {
       opacity: 0.7;
+    }
+  }
+  &--button {
+    position: relative;
+    input {
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      &:checked + label {
+        .button {
+          &--secondary {
+            background: $primary;
+          }
+        }
+      }
+    }
+    &:hover{
+      .button {
+        &--secondary {
+          box-shadow: inset 0px 5px 8px rgba(255, 255, 255, 0.4);
+        }
+      }
     }
   }
 }
