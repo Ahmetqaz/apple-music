@@ -77,7 +77,7 @@
         color: $white-3;
       }
       &:focus {
-        & + label {
+        & + .search {
           opacity: 1;
           max-height: 500px;
           pointer-events: all;
@@ -97,7 +97,7 @@
         color: $primary;
       }
     }
-    label {
+    .search {
       position: absolute;
       top: 100%;
       left: 0;
