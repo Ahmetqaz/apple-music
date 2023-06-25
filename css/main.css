@@ -715,7 +715,6 @@ svg {
 .input--search input:focus + .search {
   opacity: 1;
   max-height: 500px;
-  pointer-events: all;
 }
 .input--search .icon {
   position: absolute;
@@ -738,11 +737,10 @@ svg {
   width: 100%;
   background: #2C2C2C;
   border-radius: 0 0 9px 9px;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
   opacity: 0;
   max-height: 0;
-  pointer-events: none;
 }
 .input--search .search a {
   display: block;
@@ -1941,6 +1939,9 @@ svg {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 80px;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .row__column-item {
   display: -webkit-box;
@@ -2015,6 +2016,10 @@ svg {
           flex-direction: column;
   max-width: 150px;
   gap: 20px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .rowItem__image {
   display: -webkit-box;
@@ -2064,8 +2069,16 @@ svg {
 .rowItem._mid {
   max-width: 190px;
 }
+.rowItem._mid:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 .rowItem._round .rowItem__image {
   border-radius: 50%;
+}
+.rowItem._round:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .rowItem._lg {
   max-width: 230px;
@@ -2073,6 +2086,10 @@ svg {
 .rowItem._lg .rowItem__image {
   width: 130px;
   height: 130px;
+}
+.rowItem._lg:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .rowItem._video {
   max-width: 250px;
@@ -2088,6 +2105,10 @@ svg {
 .rowItem._video p {
   text-align: left;
 }
+.rowItem._video:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 .rowItem._extras {
   max-width: 400px;
 }
@@ -2101,6 +2122,10 @@ svg {
 }
 .rowItem._extras p {
   text-align: left;
+}
+.rowItem._extras:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .rowItem._relevant {
   padding: 42px 50px;
@@ -2195,6 +2220,10 @@ svg {
   font-size: 40px;
   font-weight: 700;
 }
+.rowItem._profile:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
 .rowItem.active {
   max-width: 200px;
 }
@@ -2231,6 +2260,10 @@ svg {
 }
 .rowItem.active p {
   font-size: 26px;
+}
+.rowItem.active:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .row__wrapper {
   overflow: auto;
